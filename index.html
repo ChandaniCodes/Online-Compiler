@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Editor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<h1 align="center">Online Compiler</h1>
+	<div class="container-fluid">
+		<div class="row">
+			<!--for code writting-->
+			<div class="col-sm-6 ">
+				<br>
+				<div class="input-heading" align="center"><span>Type your code here</span></div>
+				<div id="typeCode" contenteditable="true"></div>				
+			</div>
+
+			<!--for output area-->
+			<div class="col-sm-6">
+				<br>
+				<div class="output-heading" align="center"><span>Your output here</span></div>
+				<div id="showCode"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$('#typeCode').keyup(function(){
+				var allCodes = $("#typeCode").text();
+				$('#showCode').html(allCodes);
+		});		
+	</script>
+</body>
+</html>
